@@ -6,7 +6,6 @@ import './Body.css';
 export default function Body() {
     return (
         <div>
-            Hello.....
             <VerticalNavMenu/>
             <Feed/>
             <RightSidebar/>

@@ -1,0 +1,19 @@
+.twitter-icon {
+    font-size: 28px;
+    color: rgb(29, 155, 240)
+    
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    outline: 1px solid red;
+}
+
+.logo:hover {
+    background-color: #EBF5FE;
+}

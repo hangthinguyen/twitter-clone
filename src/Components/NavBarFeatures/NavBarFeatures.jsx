@@ -1,7 +1,10 @@
 import './NavBarFeatures.css';
 
-export default function NavBarFeatures() {
+export default function NavBarFeatures({icon, name}) {
     return (
-        <div></div>
+        <div>
+            {icon}
+            {name}
+        </div>
     )
 }

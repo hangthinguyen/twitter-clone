@@ -2,6 +2,8 @@ import './TweetButton.css';
 
 export default function TweetButton() {
     return (
-        <div></div>
+        <div>
+            <button className='tweet-btn'>Tweet</button>
+        </div>
     )
 }

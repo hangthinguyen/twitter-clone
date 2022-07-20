@@ -1,12 +1,16 @@
 .icon svg {
-    font-size: 1.5rem;
+    height: 22.25px;
     padding: 12px;
     font-weight: 400;
 }
 
 .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.75em;
+    height: 2.75em;
     border-radius: 50%;
-    outline: 1px solid red;
     padding: 4px;
 }
 
@@ -22,4 +26,6 @@
 .navbar-feature {
     display: flex;
     align-items: center;   
+    text-decoration: none;
+    padding: 4px 0px;
 }

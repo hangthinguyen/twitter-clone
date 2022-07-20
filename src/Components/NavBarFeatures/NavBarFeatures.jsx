@@ -1,10 +1,10 @@
 import './NavBarFeatures.css';
 
-export default function NavBarFeatures({icon, name}) {
+export default function NavBarFeatures({icon, name, link}) {
     return (
-        <div className='navbar-feature'>
+        <a href={link} className='navbar-feature'>
             <div className='icon'>{icon}</div>
             <div className='name'>{name}</div>
-        </div>
+        </a>
     )
 }

@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHashtag, faHome } from '@fortawesome/free-solid-svg-icons';
+import { faEllipsis, faHashtag, faHome, faList } from '@fortawesome/free-solid-svg-icons';
 import NavBarFeatures from '../NavBarFeatures/NavBarFeatures';
 import './NavContainer.css';
+import { faBell, faBookmark, faEnvelope, faUser } from '@fortawesome/free-regular-svg-icons';
 
 export default function NavContainer() {
     const [navfeatures] = useState([
@@ -18,32 +19,32 @@ export default function NavContainer() {
         },
         {
             id: 3, 
-            icon: <FontAwesomeIcon icon={faHome}/>,
+            icon: <FontAwesomeIcon icon={faBell}/>,
             name: 'Notifications'
         },
         {
             id: 4, 
-            icon: <FontAwesomeIcon icon={faHome}/>,
+            icon: <FontAwesomeIcon icon={faEnvelope}/>,
             name: 'Messages'
         },
         {
             id: 5, 
-            icon: <FontAwesomeIcon icon={faHome}/>,
+            icon: <FontAwesomeIcon icon={faBookmark}/>,
             name: 'Bookmarks'
         },
         {
             id: 6, 
-            icon: <FontAwesomeIcon icon={faHome}/>,
+            icon: <FontAwesomeIcon icon={faList}/>,
             name: 'Lists'
         },
         {
             id: 7, 
-            icon: <FontAwesomeIcon icon={faHome}/>,
+            icon: <FontAwesomeIcon icon={faUser}/>,
             name: 'Profile'
         },
         {
             id: 8, 
-            icon: <FontAwesomeIcon icon={faHome}/>,
+            icon: <FontAwesomeIcon icon={faEllipsis}/>,
             name: 'More'
         },
     ])

@@ -2,8 +2,14 @@
     color: #fff;
     font-size: 16px;
     font-weight: 700;
-    padding: 16px 80px;
+    padding: 16px 90px;
+    margin: 6px 0px;
     border-radius: 60px;
     border: none;
     background-color: rgb(29, 155, 240);
+}
+
+.tweet-btn:hover {
+    background-color: #198DD8;
+    cursor: pointer;
 }

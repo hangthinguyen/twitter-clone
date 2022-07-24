@@ -51,7 +51,7 @@ export default function NavContainer() {
         },
         {
             id: 8, 
-            icon: <FontAwesomeIcon icon={faEllipsis}/>,
+            icon: <FontAwesomeIcon icon={faEllipsis} />,
             name: 'More',
         },
     ])

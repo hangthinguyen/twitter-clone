@@ -24,8 +24,15 @@
 }
 
 .navbar-feature {
+    color: black;
     display: flex;
     align-items: center;   
     text-decoration: none;
     padding: 4px 0px;
+    border-radius: 60px;
+}
+
+.navbar-feature:hover {
+    background-color: #E7E7E8;
+    cursor: pointer;
 }

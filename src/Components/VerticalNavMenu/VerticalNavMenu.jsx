@@ -4,7 +4,7 @@ import './VerticalNavMenu.css';
 
 export default function VerticalNavMenu() {
     return (
-        <div>
+        <div className='vertical-nav'>
             <NavLogoBody/>
             <AccountButton/>
         </div>

@@ -1,14 +1,12 @@
-import RightSidebar from '../RightSidebar/RightSidebar';
-import Feed from '../Feed/Feed';
+import RightBody from '../RightBody/RightBody';
 import VerticalNavMenu from '../VerticalNavMenu/VerticalNavMenu';
 import './Body.css';
 
 export default function Body() {
     return (
-        <div>
+        <div className='body'>
             <VerticalNavMenu/>
-            <Feed/>
-            <RightSidebar/>
+            <RightBody/>
         </div>
     )
 }

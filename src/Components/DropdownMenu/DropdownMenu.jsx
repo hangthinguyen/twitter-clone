@@ -11,12 +11,14 @@ export default function DropdownMenu({isDropdownOpen}) {
             display: !isDropdownOpen ? 'block' : 'none'
         }}>
             <div className='dropdown-header'>
-                <img src={profilePic} className='dropdown-pic' alt='profile'></img>
+                <div className='image-username'>
+                    <img src={profilePic} className='dropdown-pic' alt='profile'></img>
                     <div className='username-container'>
                         <p className='username1'>Hang Nguyen</p>
                         <p className='nickname1'>@Hnguyen</p>
                     </div>
-                    <FontAwesomeIcon icon={faCheck} className='profile-icon'/>
+                </div>
+                    <FontAwesomeIcon icon={faCheck} className='check-icon'/>
             </div>
             <section className='dropdown-option-1'>
                 <a href="https://twitter.com/i/flow/login" >Add an existing account</a>

@@ -1,4 +1,7 @@
 .body {
+    display: grid;
+    grid-template-columns: 31% auto;
+    gap: 25px;
     padding: 0px 90px;
     height: 100%;
 }

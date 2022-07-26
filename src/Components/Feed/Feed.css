@@ -1,0 +1,38 @@
+.feed {
+    border: 1px solid;
+    border-color: rgb(239, 243, 244, 1);
+    border-bottom: none;
+}
+
+.feed-header {
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+}
+
+.home-btn {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+    padding: 16px 0;
+}
+
+.star-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.star-icon-container {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+}
+.star-icon-container:hover {
+    background-color: #E7E7E8;
+}

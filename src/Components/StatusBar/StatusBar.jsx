@@ -1,4 +1,5 @@
-import { faEarthAmerica } from '@fortawesome/free-solid-svg-icons';
+import { faCalendarCheck, faFaceSmile, faImage } from '@fortawesome/free-regular-svg-icons';
+import { faBars, faEarthAmerica, faGift, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import profilePic from '../../assets/profile-pic.jpeg';
 import './StatusBar.css';
@@ -14,7 +15,12 @@ export default function StatusBar() {
                     <p>Everyone can reply</p>
                 </section>
                 <section className='icon-bar'>
-
+                    <FontAwesomeIcon icon={faImage} />
+                    <FontAwesomeIcon icon={faGift} />
+                    <FontAwesomeIcon icon={faBars} />
+                    <FontAwesomeIcon icon={faFaceSmile} />
+                    <FontAwesomeIcon icon={faCalendarCheck} />
+                    <FontAwesomeIcon icon={faLocationDot} />
                 </section>
             </div>
         </div>

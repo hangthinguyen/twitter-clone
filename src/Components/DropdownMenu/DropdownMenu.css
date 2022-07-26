@@ -1,0 +1,71 @@
+.dropdown {
+    border: 0 solid black;
+    box-shadow: rgb(101 119 134 / 20%) 0px 0px 15px, rgb(101 119 134 / 15%) 0px 0px 3px 1px;
+    border-radius: 16px;
+    width: 300px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 86px;
+    left: 83px;
+    padding: 12px 0;
+    background-color: rgba(255,255,255,1.00);
+}
+.dropdown-header {
+    display: flex;
+    align-items: center;
+}
+.username-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.username1 {
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.nickname1 {
+    font-size: 14px;
+    color: #5a5a5a;
+    padding-top: 2px;
+}
+.profile-icon {
+    font-size: 16px;
+    padding: 12px;
+}
+
+.dropdown-pic {
+    border-radius: 50%;
+    padding: 12px;
+    width: 3rem;
+    height: 3rem;
+}
+
+.dropdown-option-1, .dropdown-option-2 {
+    padding: 16px;
+}
+
+.dropdown-option-1:hover, .dropdown-option-2:hover {
+    cursor: pointer;
+    background-color: #F6F9F9;
+}
+.dropdown-option-1 a, .dropdown-option-2 a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
+.dropdown-option-1 {
+    border-top: 1px solid;
+    border-color: rgb(239, 243, 244, 1);
+}
+
+.arrow {
+    font-size: 19px;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    left: 134px;
+    bottom: -11px;
+    width: 24px;
+    filter: drop-shadow(rgb(207, 217, 222) 1px 2px 2px)
+}

@@ -9,7 +9,6 @@ export default function AccountButton() {
     const [isDropdownOpen, setdropdown] = useState(false)
 
     function handleOnClick(e) {
-        console.log(e, 'hello')
         setdropdown(!isDropdownOpen);
     }
     return (

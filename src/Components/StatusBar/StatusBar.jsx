@@ -36,12 +36,6 @@ export default function StatusBar() {
       iconS: faCalendarCheck,
       toolTip: 'Schedule',
     },
-    // {
-    //     id: 6,
-    //     iconS: faLocationDot,
-    //     toolTip: 'Location'
-    // },
-
   ]);
 
   const statusTooltipBar = statusIcons.map((statusIcon) => (
@@ -54,7 +48,7 @@ export default function StatusBar() {
         onMouseEnter={() => setTooltip(true)}
         onMouseLeave={() => {
           setTooltip(false);
-          setTimeout(() => setTooltip(true), 30);
+          setTimeout(() => setTooltip(true), 5);
         }}
       />
     </div>
@@ -76,12 +70,13 @@ export default function StatusBar() {
             {statusTooltipBar}
             <FontAwesomeIcon icon={faLocationDot} className="icon-location" />
           </div>
-          <div>
+          <div className="tweet-btn-container">
             <FontAwesomeIcon icon={faCircleNotch} />
             <hr className="verticle-line" />
             <div className="circle-plus">
               <FontAwesomeIcon icon={faPlus} />
             </div>
+            <button className="status-tweet-btn">Tweet</button>
           </div>
         </section>
       </div>

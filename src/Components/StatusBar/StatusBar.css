@@ -75,6 +75,7 @@
 }
 .icon-tweet-btn-container{
     display: flex;
+    justify-content: space-between;
     color: #1D9BF0;
 }
 .verticle-line {
@@ -87,7 +88,31 @@
     background-color: white;
     color: #1D9BF0;
     border-radius: 50%;
-    border: 1px solid #1D9BF0;
+    border: 1px solid rgb(185, 202, 211);
+    height: 22px;
+    width: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+.status-tweet-btn {
+    background-color: #1D9BF0;
+    padding: 10px 17px;
+    border: none;
+    border-radius: 9999px;
+    color: white;
+    font-size: 15px;
+    font-weight: 900;
+}
+.status-tweet-btn:hover {
+    cursor: pointer;
+    background-color: #198DD8;
+}
+.tweet-btn-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 

@@ -3,10 +3,10 @@ import VerticalNavMenu from '../VerticalNavMenu/VerticalNavMenu';
 import './Body.css';
 
 export default function Body() {
-    return (
-        <div className='body'>
-            <VerticalNavMenu/>
-            <RightBody/>
-        </div>
-    )
+  return (
+    <div className="body">
+      <VerticalNavMenu />
+      <RightBody />
+    </div>
+  );
 }

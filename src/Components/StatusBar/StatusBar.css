@@ -1,6 +1,7 @@
 .status-container {
     display: flex;
     padding: 4px 16px;
+    border-bottom: 1px solid rgb(239, 243, 244, 1);
 }
 .status-pic {
     border-radius: 50%;
@@ -32,15 +33,65 @@
     width: 100%;
     margin-top: 5px;
 }
-
 .status-input:focus {
     outline: none;
 }
 .status-input-container {
     width: 100%;
-    border-bottom: 1px solid rgb(239, 243, 244, 1);
 }
 .earth-icon {
     font-size: 14px;
     padding-right: 4px;
 }
+.icons-bar {
+    display: flex;
+    margin: 0 8px;
+    padding-top: 12px;
+    padding-bottom: 7px;
+}
+.icons-bar svg {
+    padding: 9px;
+    border-radius: 50%;
+    font-size: 17px;
+}
+.icons-bar svg:hover {
+    background-color: #EBF5FE;
+    cursor: pointer;
+}
+.status-privacy-setting-container {
+    border-bottom: 1px solid rgb(239, 243, 244, 1);
+    width: 98%;
+}
+.__react_component_tooltip::after {
+    display: none;
+}
+.tool-tip {
+    padding: 3px !important;
+    font-size: 10px !important;
+}
+.icon-location {
+    opacity: 0.5;
+    pointer-events: none;
+}
+.icon-tweet-btn-container{
+    display: flex;
+    color: #1D9BF0;
+}
+.verticle-line {
+    height: 31px;
+    width: 1px;
+    background-color: rgb(185, 202, 211);
+    border: none;
+}
+.circle-plus {
+    background-color: white;
+    color: #1D9BF0;
+    border-radius: 50%;
+    border: 1px solid #1D9BF0;
+}
+
+
+
+
+
+

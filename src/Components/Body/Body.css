@@ -1,7 +1,8 @@
 .body {
-    display: grid;
-    grid-template-columns: 22% auto;
-    gap: 25px;
+    /* display: grid;
+    grid-template-columns: 22% auto; */
+    display: flex;
+    gap: 7px;
     padding: 0px 90px;
     height: 100%;
 }

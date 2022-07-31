@@ -73,7 +73,14 @@ export default function StatusBar() {
           <div className="tweet-btn-container">
             <FontAwesomeIcon icon={faCircleNotch} />
             <hr className="verticle-line" />
-            <div className="circle-plus">
+            <div
+              className="circle-plus"
+              data-tip="Add"
+              onMouseLeave={() => {
+                setTooltip(false);
+                setTimeout(() => setTooltip(true), 5);
+              }}
+            >
               <FontAwesomeIcon icon={faPlus} />
             </div>
             <button className="status-tweet-btn">Tweet</button>

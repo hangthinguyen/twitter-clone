@@ -35,4 +35,5 @@
 }
 .star-icon-container:hover {
     background-color: #E7E7E8;
+    cursor: pointer;
 }

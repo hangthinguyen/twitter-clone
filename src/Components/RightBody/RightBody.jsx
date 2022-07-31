@@ -4,7 +4,7 @@ import './RightBody.css';
 
 export default function RightBody() {
   return (
-    <div>
+    <div className="right-body">
       <Feed />
       <RightSidebar />
     </div>

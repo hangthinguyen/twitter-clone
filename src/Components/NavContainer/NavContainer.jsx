@@ -3,11 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faEllipsis, faHashtag, faHome, faList,
 } from '@fortawesome/free-solid-svg-icons';
-import NavBarFeatures from '../NavBarFeatures/NavBarFeatures';
-import './NavContainer.css';
 import {
   faBell, faBookmark, faEnvelope, faUser,
 } from '@fortawesome/free-regular-svg-icons';
+import NavBarFeatures from '../NavBarFeatures/NavBarFeatures';
+import './NavContainer.css';
 
 export default function NavContainer() {
   const [navfeatures] = useState([
@@ -60,7 +60,14 @@ export default function NavContainer() {
     },
   ]);
 
-  const navbarFeatureList = navfeatures.map((navfeature) => <NavBarFeatures key={navfeature.id} icon={navfeature.icon} name={navfeature.name} link={navfeature.link} />);
+  const navbarFeatureList = navfeatures.map((navfeature) => (
+    <NavBarFeatures
+      key={navfeature.id}
+      icon={navfeature.icon}
+      name={navfeature.name}
+      link={navfeature.link}
+    />
+  ));
 
   return (
     <div>

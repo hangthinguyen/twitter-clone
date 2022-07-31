@@ -8,7 +8,7 @@ import './AccountButton.css';
 export default function AccountButton() {
   const [isDropdownOpen, setdropdown] = useState(false);
 
-  function handleOnClick(e) {
+  function handleOnClick() {
     setdropdown(!isDropdownOpen);
   }
   return (

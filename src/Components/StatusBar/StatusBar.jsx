@@ -10,7 +10,7 @@ import './StatusBar.css';
 
 export default function StatusBar() {
   const [tooltip, setTooltip] = useState(true);
-  const [statusIcons, setStatusIcons] = useState([
+  const [statusIcons] = useState([
     {
       id: 1,
       iconS: faImage,

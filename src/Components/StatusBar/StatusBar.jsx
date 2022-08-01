@@ -1,14 +1,17 @@
 import { faCalendarCheck, faFaceSmile, faImage } from '@fortawesome/free-regular-svg-icons';
 import {
-  faBars, faCircleNotch, faEarthAmerica, faGift, faLocationDot, faPlus,
+  faBars, faEarthAmerica, faGift, faLocationDot, faPlus,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import ReactTooltip from 'react-tooltip';
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 import profilePic from '../../assets/profile-pic.jpeg';
 import './StatusBar.css';
+import InputBar from '../InputBar/InputBar';
 
-export default function StatusBar() {
+export default function StatusBar({ onChange }) {
   const [tooltip, setTooltip] = useState(true);
   const [statusIcons] = useState([
     {
@@ -53,12 +56,12 @@ export default function StatusBar() {
       />
     </div>
   ));
-
+  const percentage = { onChange };
   return (
     <div className="status-container">
       <img src={profilePic} className="status-pic" alt="profile" />
       <div className="status-input-container">
-        <input type="text" placeholder="What's happening?" className="status-input" />
+        <InputBar />
         <div className="status-privacy-setting-container">
           <section className="status-privacy-setting">
             <FontAwesomeIcon icon={faEarthAmerica} className="earth-icon" />
@@ -71,7 +74,9 @@ export default function StatusBar() {
             <FontAwesomeIcon icon={faLocationDot} className="icon-location" />
           </div>
           <div className="tweet-btn-container">
-            <FontAwesomeIcon icon={faCircleNotch} />
+            <div className="circular-bar">
+              <CircularProgressbar value={percentage} className="circular-progress-circle" />
+            </div>
             <hr className="verticle-line" />
             <div
               className="circle-plus"

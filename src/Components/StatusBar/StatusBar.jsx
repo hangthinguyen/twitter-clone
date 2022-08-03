@@ -14,7 +14,8 @@ import './StatusBar.css';
 
 export default function StatusBar() {
   const [circlarBarColorChange, setCircularBarColorChange] = useState('rgb(29, 155, 240)');
-  const [letterCounter, setLetterCounter] = useState('20');
+  const [letterCounter, setLetterCounter] = useState('');
+  const [counterColor, setCounterColor] = useState('');
   const [userInput, setInput] = useState('');
   const [percentChange, setPercentageChange] = useState(0);
   const [tooltip, setTooltip] = useState(true);
@@ -69,18 +70,27 @@ export default function StatusBar() {
 
     const inputValue = e.target.value;
     const inputLength = inputValue.length;
-    const valuePercentage = (inputLength / 300) * 100;
-    if (valuePercentage > 100) {
+    const valuePercentage = (inputLength / 280) * 100;
+
+    if (inputLength > 290) {
+      const counterOver280Char = 290 - inputLength;
+      setLetterCounter(counterOver280Char);
+      setCircularBarColorChange('white');
+    } else if (inputLength >= 280) {
+      setCircularBarColorChange('red');
+      const counterOver280Char = 280 - inputLength;
+      setLetterCounter(counterOver280Char);
+      setCounterColor('red');
+    } else if (inputLength >= 260) {
       setCircularBarColorChange('#FFCC00');
-    } else if (inputLength > 280 && inputLength < 300) {
-      // for (let i = 21; i > 0; i -= 1) {
-      //   counter--;
-      //   setLetterCounter(counter);
-      // }
-      const counter = 300 - inputLength;
-      console.log(counter);
+      const counter = 280 - inputLength;
       setLetterCounter(counter);
+      setCounterColor('#FFCC00');
+    } else {
+      setCircularBarColorChange('rgb(29, 155, 240)');
+      setLetterCounter('');
     }
+
     setPercentageChange(valuePercentage);
     setInput(inputValue);
   }, []);
@@ -113,8 +123,13 @@ export default function StatusBar() {
                   path: {
                     stroke: circlarBarColorChange,
                   },
+                  text: {
+                    fontSize: '55px',
+                    textAlign: 'center',
+                    fill: counterColor,
+                  },
                 }}
-                text={letterCounter}
+                text={String(letterCounter)}
                 className="circular-progress-circle"
               />
             </div>

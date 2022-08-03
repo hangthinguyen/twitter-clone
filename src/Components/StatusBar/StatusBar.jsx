@@ -11,14 +11,23 @@ import InputBar from '../InputBar/InputBar';
 
 import 'react-circular-progressbar/dist/styles.css';
 import './StatusBar.css';
+import Tweet from '../Tweet/Tweet';
 
 export default function StatusBar() {
   const [circlarBarColorChange, setCircularBarColorChange] = useState('rgb(29, 155, 240)');
+
   const [letterCounter, setLetterCounter] = useState('');
+
   const [counterColor, setCounterColor] = useState('');
+
   const [userInput, setInput] = useState('');
+
   const [percentChange, setPercentageChange] = useState(0);
+
   const [tooltip, setTooltip] = useState(true);
+
+  const [items, setItems] = useState([]);
+
   const [statusIcons] = useState([
     {
       id: 1,
@@ -95,62 +104,82 @@ export default function StatusBar() {
     setInput(inputValue);
   }, []);
 
+  const handleSubmit = useCallback((e) => {
+    e.preventDefault();
+    setItems([
+      ...items,
+      {
+        name: userInput,
+        id: Math.random() * 1000,
+      },
+    ]);
+    setInput('');
+  }, [items, userInput]);
+
+  const TweetList = items.map((item) => <Tweet key={item.id} name={item.name} />);
+
   return (
-    <div className="status-container">
-      <img src={profilePic} className="status-pic" alt="profile" />
+    <div>
+      <div className="status-container">
+        <img src={profilePic} className="status-pic" alt="profile" />
 
-      <div className="status-input-container">
-        <InputBar userInput={userInput} onChange={handleChange} />
+        <div className="status-input-container">
+          <InputBar userInput={userInput} onChange={handleChange} />
 
-        <div className="status-privacy-setting-container">
-          <section className="status-privacy-setting">
-            <FontAwesomeIcon icon={faEarthAmerica} className="earth-icon" />
-            <p>Everyone can reply</p>
-          </section>
-        </div>
-
-        <section className="icon-tweet-btn-container">
-          <div className="icons-bar">
-            {statusTooltipBar}
-            <FontAwesomeIcon icon={faLocationDot} className="icon-location" />
+          <div className="status-privacy-setting-container">
+            <section className="status-privacy-setting">
+              <FontAwesomeIcon icon={faEarthAmerica} className="earth-icon" />
+              <p>Everyone can reply</p>
+            </section>
           </div>
 
-          <div className="tweet-btn-container">
-            <div className="circular-bar">
-              <CircularProgressbar
-                value={percentChange}
-                styles={{
-                  path: {
-                    stroke: circlarBarColorChange,
-                  },
-                  text: {
-                    fontSize: '55px',
-                    textAlign: 'center',
-                    fill: counterColor,
-                  },
+          <section className="icon-tweet-btn-container">
+            <div className="icons-bar">
+              {statusTooltipBar}
+              <FontAwesomeIcon icon={faLocationDot} className="icon-location" />
+            </div>
+
+            <div className="tweet-btn-container">
+              <div className="circular-bar">
+                <CircularProgressbar
+                  value={percentChange}
+                  styles={{
+                    path: {
+                      stroke: circlarBarColorChange,
+                    },
+                    text: {
+                      fontSize: '55px',
+                      textAlign: 'center',
+                      fill: counterColor,
+                    },
+                  }}
+                  text={String(letterCounter)}
+                  className="circular-progress-circle"
+                />
+              </div>
+
+              <hr className="verticle-line" />
+
+              <div
+                className="circle-plus"
+                data-tip="Add"
+                onMouseLeave={() => {
+                  setTooltip(false);
+                  setTimeout(() => setTooltip(true), 5);
                 }}
-                text={String(letterCounter)}
-                className="circular-progress-circle"
-              />
+              >
+                <FontAwesomeIcon icon={faPlus} />
+              </div>
+
+              <button type="submit" className="status-tweet-btn" onClick={handleSubmit}>Tweet</button>
             </div>
+          </section>
 
-            <hr className="verticle-line" />
+        </div>
+      </div>
 
-            <div
-              className="circle-plus"
-              data-tip="Add"
-              onMouseLeave={() => {
-                setTooltip(false);
-                setTimeout(() => setTooltip(true), 5);
-              }}
-            >
-              <FontAwesomeIcon icon={faPlus} />
-            </div>
-
-            <button className="status-tweet-btn">Tweet</button>
-          </div>
-        </section>
-
+      <div>
+        {TweetList}
       </div>
     </div>
   );

@@ -1,12 +1,16 @@
-import { faCalendarCheck, faFaceSmile, faImage } from '@fortawesome/free-regular-svg-icons';
 import {
-  faBars, faEarthAmerica, faGift, faLocationDot, faPlus,
+  faCalendarCheck, faComment, faFaceSmile, faHeart, faImage,
+} from '@fortawesome/free-regular-svg-icons';
+import {
+  faArrowUpFromBracket,
+  faBars, faEarthAmerica, faEllipsis, faGift, faLocationDot, faPlus, faRetweet,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState, useCallback } from 'react';
 import ReactTooltip from 'react-tooltip';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import profilePic from '../../assets/profile-pic.jpeg';
+import samplePic from '../../assets/samplepic.jpg';
 import InputBar from '../InputBar/InputBar';
 
 import 'react-circular-progressbar/dist/styles.css';
@@ -109,14 +113,54 @@ export default function StatusBar() {
     setItems([
       ...items,
       {
+        avatar: <img
+          src={samplePic}
+          alt="avatar-pic"
+          style={{
+            width: 48,
+            height: 48,
+            borderRadius: 99999,
+          }}
+        />,
         name: userInput,
         id: Math.random() * 1000,
+        username: 'Vinh Vu',
+        nickname: '@VinhVu',
+        time: '7h',
+        moreIcon: <FontAwesomeIcon icon={faEllipsis} />,
+        commentIcon: <FontAwesomeIcon icon={faComment} />,
+        commentNumber: '10',
+        retweetIcon: <FontAwesomeIcon icon={faRetweet} />,
+        retweetNumber: '101',
+        likeIcon: <FontAwesomeIcon icon={faHeart} />,
+        likeNumber: '203',
+        shareIcon: <FontAwesomeIcon icon={faArrowUpFromBracket} />,
       },
     ]);
     setInput('');
+    setPercentageChange('');
   }, [items, userInput]);
 
-  const TweetList = items.map((item) => <Tweet key={item.id} name={item.name} />);
+  const TweetList = items.map(
+    (item) => (
+      <Tweet
+        key={item.id}
+        name={item.name}
+        avatar={item.avatar}
+        username={item.username}
+        nickname={item.nickname}
+        time={item.time}
+        moreIcon={item.moreIcon}
+        commentIcon={item.commentIcon}
+        commentNumber={item.commentNumber}
+        retweetIcon={item.retweetIcon}
+        retweetNumber={item.retweetNumber}
+        likeIcon={item.likeIcon}
+        likeNumber={item.likeNumber}
+        shareIcon={item.shareIcon}
+      />
+    ),
+  );
 
   return (
     <div>

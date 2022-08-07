@@ -32,8 +32,16 @@
 }
 .more-icon {
     color: #536471;
-    margin: 5px 0;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    font-size: 18px;
 }
+.more-icon:hover {
+    background-color: #EBF5FE;
+    color: rgb(29, 155, 240);
+}
+
 .nickname-time-devider {
     padding: 4px;
     align-items: center;

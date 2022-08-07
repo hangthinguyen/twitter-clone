@@ -6,7 +6,7 @@ import DropdownMenu from '../DropdownMenu/DropdownMenu';
 import './AccountButton.css';
 
 export default function AccountButton() {
-  const [isDropdownOpen, setdropdown] = useState(false);
+  const [isDropdownOpen, setdropdown] = useState(true);
 
   function handleOnClick() {
     setdropdown(!isDropdownOpen);

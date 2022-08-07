@@ -2,6 +2,7 @@
     display: flex;
     padding: 4px 16px;
     border-bottom: 1px solid rgb(239, 243, 244, 1);
+    background-color: white;
 }
 .status-pic {
     border-radius: 50%;

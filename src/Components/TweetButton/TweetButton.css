@@ -1,4 +1,5 @@
-.tweet-btn {
+.desktop-tweet-btn {
+    display: none;
     color: #fff;
     font-size: 16px;
     font-weight: 700;
@@ -9,13 +10,30 @@
     background-color: rgb(29, 155, 240);
 }
 
-.tweet-btn:hover {
+.desktop-tweet-btn:hover {
     background-color: #198DD8;
     cursor: pointer;
 }
 
-.small-tweet-btn {
+.mobile-tweet-btn {
     width: 50px;
     height: 50px;
-    background-color: blue;
+    background-color: rgb(29, 155, 240);
+    color: white;
+    border-radius: 50%;
+    border: none;
+}
+
+.mobile-tweet-btn:hover {
+    background-color: #198DD8;
+    cursor: pointer;
+}
+
+@media (min-width: 1180px) {
+    .desktop-tweet-btn {
+        display: block;
+    }
+    .mobile-tweet-btn {
+        display: none;
+    }
 }

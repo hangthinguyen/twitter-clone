@@ -7,6 +7,8 @@ import './Body.css';
 
 export default function Body() {
   const [items, setItems] = useState([]);
+
+  console.log(items);
   const [isPopup, setPopup] = useState(false);
 
   const handleTweetBtnClick = useCallback(() => {

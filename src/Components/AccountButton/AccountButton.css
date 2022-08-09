@@ -20,7 +20,7 @@
 }
 
 .username-container {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: flex-start;
 }
@@ -35,6 +35,7 @@
 .profile-icon {
     font-size: 16px;
     padding: 12px;
+    display: none;
 }
 
 .username {
@@ -48,4 +49,11 @@
     padding-top: 2px;
 }
 
-
+@media (min-width: 1180px) {
+    .username-container {
+        display: flex;
+    }
+    .profile-icon {
+        display: block;
+    }
+}

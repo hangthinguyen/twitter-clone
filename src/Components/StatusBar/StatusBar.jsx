@@ -1,9 +1,8 @@
 import {
-  faCalendarCheck, faComment, faFaceSmile, faHeart, faImage,
+  faCalendarCheck, faFaceSmile, faImage,
 } from '@fortawesome/free-regular-svg-icons';
 import {
-  faArrowUpFromBracket,
-  faBars, faEarthAmerica, faEllipsis, faGift, faLocationDot, faPlus, faRetweet,
+  faBars, faEarthAmerica, faGift, faLocationDot, faPlus,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState, useCallback } from 'react';
@@ -126,14 +125,9 @@ export default function StatusBar({
         username: 'Vinh Vu',
         nickname: '@VinhVu',
         time: '7h',
-        moreIcon: <FontAwesomeIcon icon={faEllipsis} />,
-        commentIcon: <FontAwesomeIcon icon={faComment} />,
         commentNumber: '10',
-        retweetIcon: <FontAwesomeIcon icon={faRetweet} />,
         retweetNumber: '101',
-        likeIcon: <FontAwesomeIcon icon={faHeart} />,
         likeNumber: '203',
-        shareIcon: <FontAwesomeIcon icon={faArrowUpFromBracket} />,
       },
     ]);
     setInput('');

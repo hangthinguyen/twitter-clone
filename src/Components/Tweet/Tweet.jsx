@@ -1,9 +1,13 @@
+import {
+  faArrowUpFromBracket, faEllipsis, faRetweet,
+} from '@fortawesome/free-solid-svg-icons';
+import { faComment, faHeart } from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Tweet.css';
 
 export default function Tweet({
   name, avatar, username, nickname, time,
-  moreIcon, commentIcon, retweetIcon, likeIcon,
-  shareIcon, commentNumber, retweetNumber, likeNumber,
+  commentNumber, retweetNumber, likeNumber,
 }) {
   return (
     <div className="tweet-container">
@@ -27,7 +31,7 @@ export default function Tweet({
 
         </div>
         <div className="more-icon">
-          {moreIcon}
+          <FontAwesomeIcon icon={faEllipsis} />
         </div>
       </div>
 
@@ -39,7 +43,7 @@ export default function Tweet({
 
         <div className="comment-icon-container">
           <div className="comment-icon">
-            {commentIcon}
+            <FontAwesomeIcon icon={faComment} />
           </div>
           <div className="icon-bar-numbers">
             {commentNumber}
@@ -48,7 +52,7 @@ export default function Tweet({
 
         <div className="retweet-icon-container">
           <div className="retweet-icon">
-            {retweetIcon}
+            <FontAwesomeIcon icon={faRetweet} />
           </div>
           <div className="icon-bar-numbers">
             {retweetNumber}
@@ -57,7 +61,7 @@ export default function Tweet({
 
         <div className="like-icon-container">
           <div className="like-icon">
-            {likeIcon}
+            <FontAwesomeIcon icon={faHeart} />
           </div>
           <div className="icon-bar-numbers">
             {likeNumber}
@@ -65,7 +69,7 @@ export default function Tweet({
         </div>
 
         <div className="share-icon">
-          {shareIcon}
+          <FontAwesomeIcon icon={faArrowUpFromBracket} />
         </div>
       </div>
     </div>

@@ -19,12 +19,12 @@ export default function Feed({
         username={item.username}
         nickname={item.nickname}
         time={item.time}
-        moreIcon={item.moreIcon}
-        commentIcon={item.commentIcon}
+        // moreIcon={item.moreIcon}
+        // commentIcon={item.commentIcon}
         commentNumber={item.commentNumber}
-        retweetIcon={item.retweetIcon}
+        // retweetIcon={item.retweetIcon}
         retweetNumber={item.retweetNumber}
-        likeIcon={item.likeIcon}
+        // likeIcon={item.likeIcon}
         likeNumber={item.likeNumber}
         shareIcon={item.shareIcon}
       />

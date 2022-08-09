@@ -5,16 +5,31 @@ import VerticalNavMenu from '../VerticalNavMenu/VerticalNavMenu';
 import './Body.css';
 
 export default function Body() {
+  const [items, setItems] = useState([]);
   const [isPopup, setPopup] = useState(false);
+
   const handleTweetBtnClick = useCallback(() => {
     setPopup(!isPopup);
-    console.log('hello');
   }, [isPopup]);
+
+  const handleTweetBtnClose = useCallback(() => {
+    setPopup(false);
+  }, [setPopup]);
+
   return (
     <div className="body">
       <VerticalNavMenu onClick={handleTweetBtnClick} />
-      <RightBody />
-      <Popup isPopup={isPopup} />
+      <RightBody items={items} setItems={setItems} />
+      <Popup
+        isPopup={isPopup}
+        setPopup={setPopup}
+        onClick={handleTweetBtnClose}
+        items={items}
+        setItems={(val) => {
+          setItems(val);
+          handleTweetBtnClose();
+        }}
+      />
     </div>
   );
 }

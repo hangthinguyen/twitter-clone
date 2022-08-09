@@ -15,9 +15,10 @@ import InputBar from '../InputBar/InputBar';
 
 import 'react-circular-progressbar/dist/styles.css';
 import './StatusBar.css';
-import Tweet from '../Tweet/Tweet';
 
-export default function StatusBar() {
+export default function StatusBar({
+  items, setItems, isShown, onMouseDown,
+}) {
   const [circlarBarColorChange, setCircularBarColorChange] = useState('rgb(29, 155, 240)');
 
   const [letterCounter, setLetterCounter] = useState('');
@@ -29,8 +30,6 @@ export default function StatusBar() {
   const [percentChange, setPercentageChange] = useState(0);
 
   const [tooltip, setTooltip] = useState(true);
-
-  const [items, setItems] = useState([]);
 
   const [statusIcons] = useState([
     {
@@ -139,28 +138,7 @@ export default function StatusBar() {
     ]);
     setInput('');
     setPercentageChange('');
-  }, [items, userInput]);
-
-  const TweetList = items.map(
-    (item) => (
-      <Tweet
-        key={item.id}
-        name={item.name}
-        avatar={item.avatar}
-        username={item.username}
-        nickname={item.nickname}
-        time={item.time}
-        moreIcon={item.moreIcon}
-        commentIcon={item.commentIcon}
-        commentNumber={item.commentNumber}
-        retweetIcon={item.retweetIcon}
-        retweetNumber={item.retweetNumber}
-        likeIcon={item.likeIcon}
-        likeNumber={item.likeNumber}
-        shareIcon={item.shareIcon}
-      />
-    ),
-  );
+  }, [items, setItems, userInput]);
 
   return (
     <div>
@@ -170,7 +148,12 @@ export default function StatusBar() {
         <div className="status-input-container">
           <InputBar userInput={userInput} onChange={handleChange} />
 
-          <div className="status-privacy-setting-container">
+          <div
+            className="status-privacy-setting-container"
+            style={{
+              display: isShown ? 'block' : 'none',
+            }}
+          >
             <section className="status-privacy-setting">
               <FontAwesomeIcon icon={faEarthAmerica} className="earth-icon" />
               <p>Everyone can reply</p>
@@ -220,10 +203,6 @@ export default function StatusBar() {
           </section>
 
         </div>
-      </div>
-
-      <div>
-        {TweetList}
       </div>
     </div>
   );

@@ -1,0 +1,18 @@
+.status-privacy-setting {
+    display: flex;
+    align-items: center;
+    color: #1D9BF0;
+    max-width: fit-content;
+    padding: 3px 14px;
+    border-radius: 9999px;
+    margin: 7px 4px 12px 4px;
+}
+.status-privacy-setting p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+}
+.status-privacy-setting:hover {
+    background-color: #EBF5FE;
+    cursor: pointer;
+}

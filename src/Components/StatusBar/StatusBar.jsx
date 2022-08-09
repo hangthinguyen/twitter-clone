@@ -146,7 +146,9 @@ export default function StatusBar({
         <img src={profilePic} className="status-pic" alt="profile" />
 
         <div className="status-input-container">
-          <InputBar userInput={userInput} onChange={handleChange} />
+          <button onMouseDown={onMouseDown} className="input-field">
+            <InputBar userInput={userInput} onChange={handleChange} />
+          </button>
 
           <div
             className="status-privacy-setting-container"

@@ -32,9 +32,8 @@ export default function Feed({
   ) : null;
 
   const handleIconsShown = useCallback(() => {
-    console.log('hello');
-    setShown(!isShown);
-  }, [isShown]);
+    setShown(true);
+  }, []);
 
   return (
     <div className="feed">

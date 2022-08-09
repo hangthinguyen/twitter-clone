@@ -3,20 +3,22 @@
     padding: 4px 16px;
     border-bottom: 1px solid rgb(239, 243, 244, 1);
     background-color: white;
+    padding-top: 60px;
 }
 .status-pic {
     border-radius: 50%;
     width: 3rem;
     height: 3rem;
+    margin-right: 12px;
 }
 .status-privacy-setting {
     display: flex;
     align-items: center;
     color: #1D9BF0;
     max-width: fit-content;
-    padding: 3px 14px;
+    padding: 3px 12px;
     border-radius: 9999px;
-    margin: 7px 4px 12px 4px;
+    margin: 0px 4px 12px 0px;
 }
 .status-privacy-setting p {
     margin: 0;
@@ -33,12 +35,20 @@
 .status-input-container {
     width: 100%;
 }
+.input-field {
+    width: 100%;
+    border: none;
+    background-color: white;
+    padding: none;
+    padding-bottom: 7px;
+}
 .earth-icon {
     font-size: 14px;
     padding-right: 4px;
 }
 .icons-bar {
     display: flex;
+    align-items: center;
 }
 .icons-bar svg {
     padding: 9px;

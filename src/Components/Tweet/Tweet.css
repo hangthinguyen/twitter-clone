@@ -23,6 +23,7 @@
     display: flex;
     color: #536471;
     padding-top: 2px;
+    align-items: center;
 }
 .tweet-username {
     font-weight: bold;
@@ -46,8 +47,11 @@
 }
 
 .nickname-time-devider {
-    padding: 4px;
-    align-items: center;
+    width: 2px;
+    height: 2px;
+    background-color: #536471;
+    margin: 0 5px;
+    border-radius: 50%;
 }
 .tweet-icon-bar {
     display: flex;

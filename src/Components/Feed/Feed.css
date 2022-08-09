@@ -5,11 +5,12 @@
 }
 
 .feed-header {
-    padding: 0 16px;
+    padding-left: 16px;
     display: flex;
     justify-content: space-between;
-    position: fixed;
-    width: 55.8%;
+    background-color: rgb(255,255,255, 0.95);
+    top: 0;
+    max-width: 1000px;
 }
 
 .home-btn {

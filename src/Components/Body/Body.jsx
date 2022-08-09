@@ -1,6 +1,7 @@
 import { useCallback, useState } from 'react';
 import Popup from '../Popup/Popup';
 import RightBody from '../RightBody/RightBody';
+import RightSidebar from '../RightSidebar/RightSidebar';
 import VerticalNavMenu from '../VerticalNavMenu/VerticalNavMenu';
 import './Body.css';
 
@@ -30,6 +31,7 @@ export default function Body() {
           handleTweetBtnClose();
         }}
       />
+      <RightSidebar />
     </div>
   );
 }

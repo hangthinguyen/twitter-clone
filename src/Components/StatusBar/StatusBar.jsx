@@ -111,15 +111,7 @@ export default function StatusBar({
     setItems([
       ...items,
       {
-        avatar: <img
-          src={samplePic}
-          alt="avatar-pic"
-          style={{
-            width: 48,
-            height: 48,
-            borderRadius: 99999,
-          }}
-        />,
+        imgSrc: samplePic,
         name: userInput,
         id: Math.random() * 1000,
         username: 'Vinh Vu',

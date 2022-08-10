@@ -15,16 +15,12 @@ export default function Feed({
       <Tweet
         key={item.id}
         name={item.name}
-        avatar={item.avatar}
+        imgSrc={item.imgSrc}
         username={item.username}
         nickname={item.nickname}
         time={item.time}
-        // moreIcon={item.moreIcon}
-        // commentIcon={item.commentIcon}
         commentNumber={item.commentNumber}
-        // retweetIcon={item.retweetIcon}
         retweetNumber={item.retweetNumber}
-        // likeIcon={item.likeIcon}
         likeNumber={item.likeNumber}
         shareIcon={item.shareIcon}
       />

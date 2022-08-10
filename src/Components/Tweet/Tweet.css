@@ -99,3 +99,8 @@
 .retweet-icon-container:hover .retweet-icon {
     background-color: #E3F1EA;
 }
+.avatar img {
+    width: 48px;
+    height: 48px;
+    border-radius: 9999px;
+}

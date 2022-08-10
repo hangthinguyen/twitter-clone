@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Tweet.css';
 
 export default function Tweet({
-  name, avatar, username, nickname, time,
+  name, imgSrc, username, nickname, time,
   commentNumber, retweetNumber, likeNumber,
 }) {
   return (
@@ -15,7 +15,7 @@ export default function Tweet({
         <div className="image-username-container">
 
           <div className="avatar">
-            {avatar}
+            <img src={imgSrc} alt="avatar-pic" />
           </div>
 
           <div className="username-nickname-container">

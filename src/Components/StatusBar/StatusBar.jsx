@@ -18,7 +18,7 @@ import './StatusBar.css';
 export default function StatusBar({
   items, setItems, isShown, onMouseDown,
 }) {
-  const [circlarBarColorChange, setCircularBarColorChange] = useState('rgb(29, 155, 240)');
+  const [circularBarColorChange, setCircularBarColorChange] = useState('rgb(29, 155, 240)');
 
   const [letterCounter, setLetterCounter] = useState('');
 
@@ -160,7 +160,7 @@ export default function StatusBar({
                   value={percentChange}
                   styles={{
                     path: {
-                      stroke: circlarBarColorChange,
+                      stroke: circularBarColorChange,
                     },
                     text: {
                       fontSize: '55px',

@@ -3,16 +3,14 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    flex-grow: 1;
     height: 100%;
     padding: 0px 12px;
     margin-top: 4px;
 }
 
-@media (min-width: 1180px) {
+@media (min-width: 1175px) {
     .vertical-nav {
-        padding: 0px 12px 0 85px;
-    }
-    .vertical-nav {
-        align-items: baseline;
+        padding: 0;
     }
 }

@@ -49,7 +49,7 @@
     padding-top: 2px;
 }
 
-@media (min-width: 1180px) {
+@media (min-width: 1175px) {
     .username-container {
         display: flex;
     }

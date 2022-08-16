@@ -5,10 +5,12 @@ export default function SearchBarPopUp({ isShownSearchPopUp }) {
     <div
       className="search-bar-pop-up-container"
       style={{
-        display: !isShownSearchPopUp ? 'block' : 'none',
+        display: !isShownSearchPopUp ? 'flex' : 'none',
       }}
     >
-      Hello
+      <span className="search-bar-text">
+        Try searching for people, topics, or keywords
+      </span>
     </div>
   );
 }

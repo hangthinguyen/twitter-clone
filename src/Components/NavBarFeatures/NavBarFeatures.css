@@ -40,7 +40,7 @@
     cursor: pointer;
 }
 
-@media (min-width: 1175px) {
+@media (min-width: 1190px) {
     .name {
         display: block;
     }

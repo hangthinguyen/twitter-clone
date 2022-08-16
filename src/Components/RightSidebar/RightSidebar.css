@@ -1,3 +1,7 @@
 .right-side-bar-container {
     flex-grow: 1;
+    margin-right: 12px;
+}
+.search-live-follow-bar {
+    width: 350px;
 }

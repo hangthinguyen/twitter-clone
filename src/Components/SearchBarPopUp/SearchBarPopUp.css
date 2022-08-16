@@ -1,6 +1,17 @@
 .search-bar-pop-up-container {
-    width: 350px;
-    height: 80px;
-    border-radius: 20px;
-    background-color: gray;
+    justify-content: center;
+    position: absolute;
+    width: 374px;
+    height: 100px;
+    top: 52px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: rgb(101 119 134 / 20%) 0px 0px 15px, rgb(101 119 134 / 15%) 0px 0px 3px 1px;
+}
+
+.search-bar-text {
+    padding: 20px 12px 12px;
+    color: #536471;
+    font-size: 15px;
 }

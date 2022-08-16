@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-@media (min-width: 1177px) {
+@media (min-width: 1190px) {
     .body {
         padding: 0 85px;
     }

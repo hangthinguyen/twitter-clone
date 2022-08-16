@@ -149,8 +149,10 @@ export default function StatusBar({
           </div>
 
           <section className="icon-tweet-btn-container">
-            <div className="icons-bar">
-              {statusTooltipBar}
+            <div className="icon-bar-container">
+              <div className="icons-bar">
+                {statusTooltipBar}
+              </div>
               <FontAwesomeIcon icon={faLocationDot} className="icon-location" />
             </div>
 

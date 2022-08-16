@@ -5,28 +5,23 @@ import SearchBarPopUp from '../SearchBarPopUp/SearchBarPopUp';
 import './SearchBar.css';
 
 export default function SearchBar({
-  searchInput, onChange,
+  searchInput, onChange, onClick, isShownSearchPopUp,
 }) {
-  const [isShownSearchPopUp, setShownSearchPopup] = useState(false);
   const [isBorderColorred, setBorderColor] = useState('#EFF3F4');
-
-  const handleSearchBarPopUp = useCallback(() => {
-    setShownSearchPopup(!isShownSearchPopUp);
-  }, [isShownSearchPopUp]);
 
   const handleBorderColor = useCallback(() => {
     setBorderColor('#1D9BF0');
   }, []);
 
   return (
-    <div>
+    <div className="search-pop-up-container">
 
       <button
         className="search-bar-container"
         style={{
           borderColor: isBorderColorred,
         }}
-        onClick={handleSearchBarPopUp}
+        onClick={onClick}
         onMouseDown={handleBorderColor}
       >
         <FontAwesomeIcon

@@ -72,6 +72,17 @@ export default function Body() {
       retweetNumber: '308',
       likeNumber: '195',
     },
+    {
+      imgSrc: '/static/media/samplepic.7337fba50c590ecc7138.jpg',
+      name: 'booloolalaloo',
+      id: 765.67268738,
+      username: 'Brownie',
+      nickname: '@VinhVu',
+      time: '2d',
+      commentNumber: '309',
+      retweetNumber: '208',
+      likeNumber: '105',
+    },
   ]);
 
   const [isPopup, setPopup] = useState(false);

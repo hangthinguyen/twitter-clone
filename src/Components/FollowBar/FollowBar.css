@@ -1,0 +1,18 @@
+.follow-btn {
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    background-color: black;
+    height: 32px;
+    width: 77px;
+    border-radius: 9999px;
+    border: none;
+}
+
+.follow-btn:hover {
+    background-color: #272C30;
+    cursor: pointer;
+}
+.tweet-username {
+    color: black;
+}

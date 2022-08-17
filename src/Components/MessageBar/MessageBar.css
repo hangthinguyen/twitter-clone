@@ -1,0 +1,8 @@
+.message-bar {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    height: 53px;
+    align-items: center;
+    box-shadow: rgb(101 119 134 / 20%) 0px 0px 15px, rgb(101 119 134 / 15%) 0px 0px 3px 1px;;
+}

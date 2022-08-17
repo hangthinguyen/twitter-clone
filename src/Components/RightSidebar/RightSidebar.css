@@ -5,3 +5,20 @@
 .search-live-follow-bar {
     width: 350px;
 }
+
+.footer {
+    text-decoration: none;
+    color: #536471;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.footer:hover {
+    text-decoration: underline;
+}
+
+.footer-container {
+    margin: 0 7px;
+    font-size: 13px;
+    color: #536471;
+}

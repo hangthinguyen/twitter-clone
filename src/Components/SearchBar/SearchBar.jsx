@@ -6,7 +6,7 @@ import './SearchBar.css';
 
 export default function SearchBar({
   searchInput, onChange, onClick, isShownSearchPopUp,
-  isInputValueMoreThan0, onDelete,
+  onDelete,
 }) {
   const [isBorderColorred, setBorderColor] = useState('#EFF3F4');
   const [isBackgroundColorred, setBackgroundColor] = useState('#EFF3F4');
@@ -19,7 +19,7 @@ export default function SearchBar({
   return (
     <div className="search-pop-up-container">
 
-      <button
+      <div
         className="search-bar-container"
         style={{
           borderColor: isBorderColorred,
@@ -27,6 +27,9 @@ export default function SearchBar({
         }}
         onClick={onClick}
         onMouseDown={handleColor}
+        role="button"
+        tabIndex={0}
+        onKeyDown={onClick}
       >
         <FontAwesomeIcon
           icon={faMagnifyingGlass}
@@ -52,12 +55,12 @@ export default function SearchBar({
           className="search-delete-btn"
           onClick={onDelete}
           style={{
-            visibility: isInputValueMoreThan0 > 0 ? 'visible' : 'hidden',
+            visibility: searchInput.length > 0 ? 'visible' : 'hidden',
           }}
         >
           <FontAwesomeIcon icon={faX} />
         </button>
-      </button>
+      </div>
 
       <SearchBarPopUp isShownSearchPopUp={isShownSearchPopUp} />
 

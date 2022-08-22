@@ -6,11 +6,12 @@ import LiveBar from '../LiveBar/LiveBar';
 import MessageBar from '../MessageBar/MessageBar';
 import './RightSidebar.css';
 import FollowBar from '../FollowBar/FollowBar';
+import OpenedMessageBar from '../OpenedMessageBar/OpenedMessageBar';
 
 export default function RightSidebar() {
   const [isShownSearchPopUp, setShownSearchPopup] = useState(true);
   const [searchInput, setSearchInput] = useState('');
-  const [isInputValueMoreThan0, setInputLengthSearchBar] = useState(0);
+  const [isMessageShown, setMessageShown] = useState(false);
 
   const handleSearchBarPopUp = useCallback(() => {
     setShownSearchPopup(!isShownSearchPopUp);
@@ -18,15 +19,18 @@ export default function RightSidebar() {
 
   const handleSearch = useCallback((e) => {
     e.preventDefault();
+
     const InputValueSearchBar = e.target.value;
-    const InputValueSearchLength = InputValueSearchBar.length;
     setSearchInput(InputValueSearchBar);
-    setInputLengthSearchBar(InputValueSearchLength);
   }, []);
 
   const handleInputDelete = useCallback(() => {
     setSearchInput('');
   }, []);
+
+  const handleMessageShown = useCallback(() => {
+    setMessageShown(!isMessageShown);
+  }, [isMessageShown]);
 
   return (
     <div
@@ -39,7 +43,6 @@ export default function RightSidebar() {
           onChange={handleSearch}
           isShownSearchPopUp={isShownSearchPopUp}
           onClick={handleSearchBarPopUp}
-          isInputValueMoreThan0={isInputValueMoreThan0}
           onDelete={handleInputDelete}
         />
 
@@ -59,6 +62,7 @@ export default function RightSidebar() {
         </div>
 
         <MessageBar />
+        <OpenedMessageBar onClick={handleMessageShown} isMessageShown={isMessageShown} />
       </div>
     </div>
   );

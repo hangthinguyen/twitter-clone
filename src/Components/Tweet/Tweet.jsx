@@ -24,7 +24,7 @@ export default function Tweet({
             </div>
             <div className="nickname-time-container">
               {nickname}
-              <div className="nickname-time-devider" />
+              <div className="devider-dot" />
               {time}
             </div>
           </div>

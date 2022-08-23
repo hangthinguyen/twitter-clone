@@ -6,7 +6,6 @@
     box-sizing: border-box;
     position: absolute;
     bottom: 86px;
-    left: 80px;
     padding: 12px 0;
     background-color: rgba(255,255,255,1.00);
 }
@@ -66,10 +65,10 @@
     font-size: 19px;
     position: absolute;
     color: rgb(255, 255, 255);
-    left: 134px;
     bottom: -11px;
     width: 24px;
-    filter: drop-shadow(rgb(207, 217, 222) 1px 2px 2px)
+    filter: drop-shadow(rgb(207, 217, 222) 1px 2px 2px);
+    transform: translateX(10px);
 }
 
 .image-username {
@@ -80,4 +79,10 @@
 .check-icon {
     font-size: 17px;
     color: rgb(29, 155, 240);
+}
+
+@media (min-width: 1190px) {
+    .arrow {
+        left: 134px;
+    }
 }

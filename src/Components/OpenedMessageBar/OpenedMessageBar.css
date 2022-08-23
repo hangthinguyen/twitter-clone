@@ -9,6 +9,10 @@
     border-top-right-radius: 16px;
 }
 
+.open-message-bar-header:hover {
+    cursor: pointer;
+}
+
 .m-request-container:hover {
     background-color: #F6F9F9;
     cursor: pointer ;
@@ -22,6 +26,7 @@
     bottom: -5px;
     background-color: white;
     width: 33.7%;
+    max-width: 400px;
 }
 
 .m-request-container {
@@ -47,6 +52,28 @@
 }
 
 .request-text {
-    font-size: 14px;
+    font-size: 13px;
     color: #536471;
+}
+
+.messages {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.message-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message-icon:hover {
+    background-color: #F7F7F7;
+}
+
+.message-icons-container {
+    display: flex;
 }

@@ -1,5 +1,7 @@
-import { useState } from 'react';
-import { faAnglesDown, faEnvelopeCircleCheck, faEnvelopeOpenText } from '@fortawesome/free-solid-svg-icons';
+import { useState, useCallback } from 'react';
+import {
+  faAnglesDown, faAnglesUp, faEnvelopeCircleCheck, faEnvelopeOpenText,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Pic1 from '../../assets/pic1.jpeg';
 import Pic2 from '../../assets/pic2.jpeg';
@@ -10,9 +12,10 @@ import Messages from '../Messages/Messages';
 import './OpenedMessageBar.css';
 
 export default function OpenedMessageBar({ onClick, isMessageShown }) {
+  const [isHover, setHover] = useState(false);
   const [messages] = useState([
     {
-      id: '1',
+      id: '0',
       mUsername: 'Isabella',
       mNickname: '@Isbella',
       mTime: 'Oct 28, 2021',
@@ -20,7 +23,7 @@ export default function OpenedMessageBar({ onClick, isMessageShown }) {
       ImgS: Pic1,
     },
     {
-      id: '2',
+      id: '1',
       mUsername: 'Hanna',
       mNickname: '@Hanna',
       mTime: 'Sept 20, 2021',
@@ -28,7 +31,7 @@ export default function OpenedMessageBar({ onClick, isMessageShown }) {
       ImgS: Pic2,
     },
     {
-      id: '3',
+      id: '2',
       mUsername: 'Ken',
       mNickname: '@Ken',
       mTime: 'Apr 16, 2021',
@@ -36,7 +39,7 @@ export default function OpenedMessageBar({ onClick, isMessageShown }) {
       ImgS: Pic3,
     },
     {
-      id: '4',
+      id: '3',
       mUsername: 'Lan',
       mNickname: '@Lan',
       mTime: 'Jan 10, 2021',
@@ -44,7 +47,7 @@ export default function OpenedMessageBar({ onClick, isMessageShown }) {
       ImgS: Pic4,
     },
     {
-      id: '5',
+      id: '4',
       mUsername: 'Rum',
       mNickname: '@Rum',
       mTime: 'Nov 16, 2020',
@@ -52,6 +55,17 @@ export default function OpenedMessageBar({ onClick, isMessageShown }) {
       ImgS: Pic5,
     },
   ]);
+
+  const handleHover = useCallback((todoid) => {
+    console.log('hell');
+
+    for (let i = 0; i < messages.length; i++) {
+      if (messages[i].id !== todoid) {
+        console.log(i);
+        setHover(!isHover);
+      }
+    }
+  }, [isHover, messages]);
 
   const MessagesList = messages.map((message) => (
     <Messages
@@ -61,8 +75,12 @@ export default function OpenedMessageBar({ onClick, isMessageShown }) {
       mNickname={message.mNickname}
       mTime={message.mTime}
       ImgS={message.ImgS}
+      onMouseOver={handleHover}
+      isHover={isHover}
+      todoid={message.id}
     />
   ));
+
   return (
     <div className="open-message-bar-container">
       <div
@@ -81,7 +99,8 @@ export default function OpenedMessageBar({ onClick, isMessageShown }) {
             <FontAwesomeIcon icon={faEnvelopeCircleCheck} />
           </div>
           <div className="message-icon">
-            <FontAwesomeIcon icon={faAnglesDown} />
+            { isMessageShown
+              ? <FontAwesomeIcon icon={faAnglesDown} /> : <FontAwesomeIcon icon={faAnglesUp} />}
           </div>
 
         </div>

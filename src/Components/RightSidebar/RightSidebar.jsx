@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
 import SearchBar from '../SearchBar/SearchBar';
 import LiveBar from '../LiveBar/LiveBar';
-import MessageBar from '../MessageBar/MessageBar';
 import './RightSidebar.css';
 import FollowBar from '../FollowBar/FollowBar';
 import OpenedMessageBar from '../OpenedMessageBar/OpenedMessageBar';
@@ -61,7 +60,6 @@ export default function RightSidebar() {
           <div className="copy-right">&copy; 2022 Twitter, Inc.</div>
         </div>
 
-        <MessageBar />
         <OpenedMessageBar onClick={handleMessageShown} isMessageShown={isMessageShown} />
       </div>
     </div>

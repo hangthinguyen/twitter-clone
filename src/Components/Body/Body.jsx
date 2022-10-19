@@ -2,12 +2,13 @@ import { useCallback, useState } from 'react';
 import Popup from '../Popup/Popup';
 import RightBody from '../RightBody/RightBody';
 import VerticalNavMenu from '../VerticalNavMenu/VerticalNavMenu';
+import SamplePic from '../../assets/samplepic.jpg';
 import './Body.css';
 
 export default function Body() {
   const [items, setItems] = useState([
     {
-      imgSrc: '/static/media/samplepic.7337fba50c590ecc7138.jpg',
+      imgSrc: SamplePic,
       name: 'Hello',
       id: 364.6667327998192,
       username: 'Hang Nguyen',
@@ -18,7 +19,7 @@ export default function Body() {
       likeNumber: '198',
     },
     {
-      imgSrc: '/static/media/samplepic.7337fba50c590ecc7138.jpg',
+      imgSrc: SamplePic,
       name: 'My name is Hang',
       id: 943.3786926501077,
       username: 'Vinh Vu',
@@ -29,8 +30,8 @@ export default function Body() {
       likeNumber: '203',
     },
     {
-      imgSrc: '/static/media/samplepic.7337fba50c590ecc7138.jpg',
-      name: 'My boyfriend is a looloo',
+      imgSrc: SamplePic,
+      name: 'I am a web developer',
       id: 275.38382012485175,
       username: 'Hang Nguyen',
       nickname: '@Hnguyen',
@@ -40,8 +41,8 @@ export default function Body() {
       likeNumber: '301',
     },
     {
-      imgSrc: '/static/media/samplepic.7337fba50c590ecc7138.jpg',
-      name: 'Booboo lalooloo is my bf',
+      imgSrc: SamplePic,
+      name: 'I like to code',
       id: 99.8199798402728,
       username: 'Rumble',
       nickname: '@VRumRum',
@@ -51,8 +52,8 @@ export default function Body() {
       likeNumber: '404',
     },
     {
-      imgSrc: '/static/media/samplepic.7337fba50c590ecc7138.jpg',
-      name: '>.<',
+      imgSrc: SamplePic,
+      name: 'I am interested in web design',
       id: 853.2223131599641,
       username: 'Vinh Vu',
       nickname: '@VinhVu',
@@ -62,8 +63,8 @@ export default function Body() {
       likeNumber: '306',
     },
     {
-      imgSrc: '/static/media/samplepic.7337fba50c590ecc7138.jpg',
-      name: 'lalalala',
+      imgSrc: SamplePic,
+      name: 'I am still learning',
       id: 765.6726873870781,
       username: 'Brownie',
       nickname: '@VinhVu',
@@ -73,8 +74,8 @@ export default function Body() {
       likeNumber: '195',
     },
     {
-      imgSrc: '/static/media/samplepic.7337fba50c590ecc7138.jpg',
-      name: 'booloolalaloo',
+      imgSrc: SamplePic,
+      name: 'Thank you!',
       id: 765.67268738,
       username: 'Brownie',
       nickname: '@VinhVu',

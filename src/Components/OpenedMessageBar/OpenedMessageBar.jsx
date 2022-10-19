@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState } from 'react';
 import {
   faAnglesDown, faAnglesUp, faEnvelopeCircleCheck, faEnvelopeOpenText,
 } from '@fortawesome/free-solid-svg-icons';
@@ -12,7 +12,6 @@ import Messages from '../Messages/Messages';
 import './OpenedMessageBar.css';
 
 export default function OpenedMessageBar({ onClick, isMessageShown }) {
-  const [isHover, setHover] = useState(false);
   const [messages] = useState([
     {
       id: '0',
@@ -56,17 +55,6 @@ export default function OpenedMessageBar({ onClick, isMessageShown }) {
     },
   ]);
 
-  const handleHover = useCallback((todoid) => {
-    console.log('hell');
-
-    for (let i = 0; i < messages.length; i++) {
-      if (messages[i].id !== todoid) {
-        console.log(i);
-        setHover(!isHover);
-      }
-    }
-  }, [isHover, messages]);
-
   const MessagesList = messages.map((message) => (
     <Messages
       key={message.id}
@@ -75,8 +63,6 @@ export default function OpenedMessageBar({ onClick, isMessageShown }) {
       mNickname={message.mNickname}
       mTime={message.mTime}
       ImgS={message.ImgS}
-      onMouseOver={handleHover}
-      isHover={isHover}
       todoid={message.id}
     />
   ));
